@@ -56,5 +56,16 @@
         "temp/": true,
         "Temp/": true
     },
+    "<<<<<<<Updatedupstream=======files.associations": {
+        "*.asset": "yaml",
+        "*.meta": "yaml",
+        "*.prefab": "yaml",
+        "*.unity": "yaml"
+    },
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "*.sln": "*.csproj"
+    },
+    ">>>>>>>Stashedchangesdotnet.defaultSolution": "Bouh.sln",
     "dotnet.defaultSolution": "Bouh.sln"
 }

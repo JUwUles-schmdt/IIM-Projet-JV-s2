@@ -49,7 +49,7 @@ namespace A1_24_25
 
         void Start()
         {
-            data = DatabaseManager.Instance.GetData(id, randomAllow);
+            data = DatabaseManager.Instance.GetEnemyData(id, randomAllow); //DatabaseManager.Instance.GetData(this, _id, randomAllow) as EnemyData;
             Init();
         }
 

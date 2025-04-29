@@ -11,7 +11,8 @@ namespace A1_24_25
 
         [SerializeField] private EnemyDatabase enemyDatabase;
 
-        private void Awake()
+        [SerializeField] private List<ItemDatabase> itemDatabases;
+        private void Awake()    
         {
             if (_instance == null)
                 _instance = this;
@@ -21,7 +22,24 @@ namespace A1_24_25
             DontDestroyOnLoad(gameObject);
         }
 
-        public EnemyData GetData(int id, bool random = false) 
+        public EnemyData GetEnemyData(int id, bool random = false) 
             => enemyDatabase.GetData(id, random);
+
+        public ItemData GetItemData(ItemDatabase.CATEGORY cat, int id, bool random = false)
+            => itemDatabases.Find(x => x.category == cat).GetData(id, random);
+
+        public BaseData GetData(MonoBehaviour mono, int id, bool random = false)
+        {
+            switch(mono)
+            {
+                case EnemyController:
+                    return enemyDatabase.GetData(id, random);
+
+                case ItemController ic:
+                    return GetItemData(ic.Category, id, random);
+
+            }
+            return null;
+        }
     }
 }

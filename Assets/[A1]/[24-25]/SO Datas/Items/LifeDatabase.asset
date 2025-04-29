@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b492cf3005cee3d4a84b75d2d644b37b, type: 3}
+  m_Name: LifeDatabase
+  m_EditorClassIdentifier: 
+  category: 2
+  datas:
+  - label: Common Life
+    sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+    color: {r: 1, g: 0.9479667, b: 0, a: 1}
+    scaleCoef: 1
+    quantityMax: 99
+    value: 1
+  - label: Uncommon Life
+    sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+    color: {r: 1, g: 0.6094189, b: 0, a: 1}
+    scaleCoef: 1
+    quantityMax: 99
+    value: 2
+  - label: Rare Life
+    sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+    color: {r: 1, g: 0, b: 0, a: 1}
+    scaleCoef: 1
+    quantityMax: 99
+    value: 3
+  - label: Ultra Rare Life
+    sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+    color: {r: 0, g: 0.03644681, b: 1, a: 1}
+    scaleCoef: 1
+    quantityMax: 99
+    value: 4
+  - label: Legendary Life
+    sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+    color: {r: 1, g: 0, b: 0.956861, a: 1}
+    scaleCoef: 1
+    quantityMax: 99
+    value: 5

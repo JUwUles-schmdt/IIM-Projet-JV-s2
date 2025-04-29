@@ -6,20 +6,13 @@ using UnityEngine;
 namespace A1_24_25
 {
     [Serializable]
-    public class EnemyData
+    public class EnemyData : BaseData
     {
         public enum MOVE_DIR
         {
             HORIZONTAL,
             VERTICAL
         }
-
-        public string label;
-
-        [Header("SETUP")]
-        public float scaleCoef;
-        public Sprite sprite;
-        public Color color;
 
         [Header("STATS")]
         public int pv;

@@ -7,7 +7,7 @@ using UnityEngine;
 public class Stats
 {
     public int life;
-    public int def;
+    public int stamina;
     public int damage;
     public float speedMove;
     public float forceJump;
@@ -15,7 +15,7 @@ public class Stats
     public Stats(int life, int def, int damage, float speedMove, float forceJump)
     {
         this.life = life;
-        this.def = def;
+        this.stamina = def;
         this.damage = damage;
         this.speedMove = speedMove;
         this.forceJump = forceJump;
@@ -24,7 +24,7 @@ public class Stats
     public Stats(int level)
     {
         life = level;
-        def = level;
+        stamina = level;
         damage = level;
         speedMove = level;
         forceJump = level;

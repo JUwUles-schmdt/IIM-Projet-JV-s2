@@ -112,7 +112,7 @@ public class EnemyController : MonoBehaviour
                 if (change)
                     ChangeDirection();
 
-                _rgbd2D.transform.position += _direction * Time.deltaTime * data.speed;
+                _rgbd2D.transform.position += -_direction * Time.deltaTime * data.speed;
                 _countdown += Time.deltaTime;
                 break;
 

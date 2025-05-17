@@ -24,12 +24,11 @@ public class PlayerControllers : MonoBehaviour
     //[SerializeField] private float forceJump;
     [SerializeField] private bool canJump = true;
     public float fallingSpeed;
-    public float falllingDirection;
+    public float fallingDirection;
     public Transform groundCheck;
     public LayerMask enemyLayer;
 
-    //Un bool pou savoir si l'on peut sauter ou non (utile pendant la possession)
-    //[SerializeField] private Transform groundCheck;
+    //Un bool pour savoir si l'on peut sauter ou non (utile pendant la possession)
     private int _limiteJump = 2;
     private int _currentJump;
 
@@ -76,16 +75,8 @@ public class PlayerControllers : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && _currentJump < _limiteJump && canJump)
             Jump();
 
-        //Si on est dans une zone de possession et que l'on appuie sur E on possède, si on possède et qu'on appuie sur R on dépossède
-        if (toucher == true && Input.GetKeyDown(KeyCode.E))
-        { 
-            Possess();
-            if(isTV == true)
-                TV();
-        }
 
-        if (_possess == true && Input.GetKeyDown(KeyCode.R))
-            ExitPossess();
+        bump();
 
 
     }
@@ -122,20 +113,12 @@ public class PlayerControllers : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
-        {
-            
-            _currentJump = 0;
-        }
-
-    }
+    
 
     void slowFall()
     {
-        falllingDirection = Input.GetAxisRaw("Horizontal");
-        if (falllingDirection < 0)
+        fallingDirection = Input.GetAxisRaw("Horizontal");
+        if (fallingDirection < 0)
         {
             fallingSpeed = 0;
         }
@@ -165,66 +148,20 @@ public class PlayerControllers : MonoBehaviour
 
 
 
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        //Si on entre dans le Trigger d'un objet, on peut le posséder
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Object"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
-            toucher = true;
+            _currentJump = 0;
         }
-
-        if (collision.gameObject.tag == "TV")
-        {
-            isTV = true;
-        }
-
-
+        
     }
     private void OnTriggerExit2D(UnityEngine.Collider2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
             SetDamage(-1);
 
-
-        //Si on sort du Trigger d'un objet, on peut plus le posséder
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Object"))
-        {
-            toucher = false;
-        }
-
-        if (collision.gameObject.tag == "TV")
-        {
-            isTV = false;
-        }
     }
 
 
-
-    //La fonction pour posséder
-    void Possess()
-    {
-        _possess = true;
-
-        Color currentColor = _spriteRend.color;
-        currentColor.a = 0;
-        _spriteRend.color = currentColor;
-        canJump = false;
-    }
-    //La fonction pour déposséder
-    void ExitPossess()
-    {
-        _possess = false;
-
-        Color currentColor = _spriteRend.color;
-        currentColor.a = 1;
-        _spriteRend.color = currentColor;
-        canJump = true;
-        canMove = true;
-    }
-    
-    void TV()
-    {
-        canMove = false;
-    }
 }

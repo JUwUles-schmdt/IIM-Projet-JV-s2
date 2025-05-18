@@ -28,4 +28,6 @@ public class projectile : MonoBehaviour {
             transform.position = Vector2.MoveTowards(transform.position, collision.transform.position, attractionForce * Time.deltaTime);
         }
     }
+
+    
 }

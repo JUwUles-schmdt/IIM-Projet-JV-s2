@@ -40,12 +40,6 @@ public class PlayerControllers : MonoBehaviour
     //public float stamina;
     //public float staminaLeft;
 
-    //La partie possess est une partie qui permet de posséder les objet quel qu'ils soient
-    [Header("POSSESS")]
-    [SerializeField] private bool _possess = false; //Un bool pour savoir si l'on est en train de posséder ou non
-    [SerializeField] private bool toucher = false; //Un bool pour savoir si l'on est dans une zone où l'on peut posséder
-    [SerializeField] private bool isTV = false;
-    [SerializeField] private bool isVase = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

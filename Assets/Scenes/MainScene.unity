@@ -1096,9 +1096,17 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 2624296782202940236, guid: 1235c58847811534ab33729ae17e9294, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2870852814782897045, guid: 1235c58847811534ab33729ae17e9294, type: 3}
       propertyPath: m_Name
       value: TV
+      objectReference: {fileID: 0}
+    - target: {fileID: 2870852814782897045, guid: 1235c58847811534ab33729ae17e9294, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6251244983034645120, guid: 1235c58847811534ab33729ae17e9294, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1172,6 +1180,10 @@ PrefabInstance:
     - target: {fileID: 1754906164563905714, guid: 02c911ca185e0c04c8fa90ee048e2b80, type: 3}
       propertyPath: m_Name
       value: Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 1754906164563905714, guid: 02c911ca185e0c04c8fa90ee048e2b80, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5662551460605062430, guid: 02c911ca185e0c04c8fa90ee048e2b80, type: 3}
       propertyPath: player

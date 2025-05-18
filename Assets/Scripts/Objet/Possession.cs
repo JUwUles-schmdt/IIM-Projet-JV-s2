@@ -36,10 +36,6 @@ public class Possession : MonoBehaviour
         _boxCol = GetComponent<BoxCollider2D>();
         _controller = GetComponent<PlayerControllers>();
 
-        _controller.enabled = false;
-        if(_objects == OBJECTS.TV)
-            emission.SetActive(false);
-
     }
 
     // Update is called once per frame
@@ -70,12 +66,12 @@ public class Possession : MonoBehaviour
         {
             if (_objects == OBJECTS.BOX)
             {
-                _controller.enabled = true;
+                Debug.Log("box");
                 Move();
             }
             else if (_objects == OBJECTS.TV) 
             {
-                emission.SetActive(true);
+                
             }
         }
 

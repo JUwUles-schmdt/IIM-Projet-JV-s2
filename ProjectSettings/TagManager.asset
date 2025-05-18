@@ -3,18 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Shoot
+  - Box
+  - TV
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Emission
   - Water
   - UI
   - Ground
   - Enemy
   - Player
-  - 
+  - Object
   - 
   - 
   - 

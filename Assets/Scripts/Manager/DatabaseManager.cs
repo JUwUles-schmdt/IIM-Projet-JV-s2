@@ -28,7 +28,7 @@ public class DatabaseManager : MonoBehaviour
     {
         switch (mono)
         {
-            case EnemyController:
+            case EnemyController_R:
                 return enemyDatabase.GetData(id, random);
 
             case ItemController ic:

@@ -56,7 +56,7 @@
         "temp/": true,
         "Temp/": true
     },
-    "<<<<<<<Updatedupstream=======files.associations": {
+    "<<<<<<<Updatedupstream<<<<<<<Updatedupstream=======files.associations": {
         "*.asset": "yaml",
         "*.meta": "yaml",
         "*.prefab": "yaml",
@@ -67,5 +67,6 @@
         "*.sln": "*.csproj"
     },
     ">>>>>>>Stashedchangesdotnet.defaultSolution": "Bouh.sln",
+    "=======>>>>>>>Stashedchangesdotnet.defaultSolution": "Bouh.sln",
     "dotnet.defaultSolution": "Bouh.sln"
 }

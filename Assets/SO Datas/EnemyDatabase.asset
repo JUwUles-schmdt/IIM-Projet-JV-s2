@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   datas:
   - label: Comun
-    scaleCoef: 1
     sprite: {fileID: 8462958448085352970, guid: 3f8d04d538eafb24d8e68dc5e41be2eb, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
+    scaleCoef: 1
     pv: 5
     speed: 5
     damage: 1

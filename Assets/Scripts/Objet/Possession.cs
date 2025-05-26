@@ -13,6 +13,8 @@ public class Possession : MonoBehaviour
 
     [SerializeField] private GameObject emission;
 
+    [SerializeField] private PlayerControllers playcont;
+
     private BoxCollider2D _boxCol;
 
     [SerializeField] private float speedMove;
@@ -33,9 +35,16 @@ public class Possession : MonoBehaviour
 
     void Start()
     {
+        if(emission == null)
+        {
+            return;
+        }
         _boxCol = GetComponent<BoxCollider2D>();
         _controller = GetComponent<PlayerControllers>();
+        emission = GetComponent<GameObject>();
+        playcont = GetComponent<PlayerControllers>();
 
+        
     }
 
     // Update is called once per frame
@@ -60,10 +69,17 @@ public class Possession : MonoBehaviour
         //    possessing = false;
         //}
 
-        
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            possessing = false ;
+            playcont.canJump = true;
+            playcont.canMove = true;
+        }
 
         if (possessing == true)
         {
+            playcont.canJump = false ;
+            playcont.canMove = false ;
             if (_objects == OBJECTS.BOX)
             {
                 Debug.Log("box");
@@ -82,7 +98,16 @@ public class Possession : MonoBehaviour
     {
         if (collision.gameObject.tag == "Shoot")
         {
+            
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Shoot")
+        {
             possessing = true;
+            Debug.Log("il est 1h du zbah, marches un peu!");
         }
     }
 

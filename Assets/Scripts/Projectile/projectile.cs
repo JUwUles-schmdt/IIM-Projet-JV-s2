@@ -16,13 +16,17 @@ public class projectile : MonoBehaviour {
 
     // La fonction OnTriggerEnter s'enclenche quand votre Trigger touche un autre collider/trigger
     void OnTriggerEnter2D(Collider2D collision) {
-        if (!collision.isTrigger && collision.tag != "Player") {     // Sinon si on touche un mur (un collider qui n'est PAS un trigger) et que ce n'est pas le joueur
-            Destroy(gameObject);        // On détruit simplement le projectile
-        }
+        
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+        if (!collision.isTrigger && collision.tag != "Player")              // Sinon si on touche un mur (un collider qui n'est PAS un trigger) et que ce n'est pas le joueur
+        {
+            Destroy(gameObject);        // On détruit simplement le projectile
+        }
+
+
         if (collision.gameObject.layer == LayerMask.NameToLayer("Object"))
         {
             transform.position = Vector2.MoveTowards(transform.position, collision.transform.position, attractionForce * Time.deltaTime);

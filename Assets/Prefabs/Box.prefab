@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 183550254949376882}
   - component: {fileID: 3658668261206446862}
   - component: {fileID: 5662551460605062430}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Box
   m_TagString: Box
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1754906164563905714}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.62, y: -0.55, z: 0}
+  m_LocalPosition: {x: -8.27, y: -0.61, z: 0}
   m_LocalScale: {x: 0.5012, y: 0.5012, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -59,7 +59,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -126,7 +126,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 10
+  m_Radius: 21.012915
 --- !u!61 &183550254949376882
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -212,11 +212,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffd0e61793a81b14ca7eb3a32f6b4656, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toucher: 0
   possessing: 0
-  player: {fileID: 0}
+  emission: {fileID: 0}
+  playcont: {fileID: 0}
   speedMove: 9
   detectWall:
     serializedVersion: 2
     m_Bits: 128
   wallDist: 1.5
+  _objects: 1

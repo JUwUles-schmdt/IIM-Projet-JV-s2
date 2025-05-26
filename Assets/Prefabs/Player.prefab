@@ -143,22 +143,17 @@ MonoBehaviour:
     damage: 5
     speedMove: 10
     forceJump: 7
-  canMove: 1
-  canJump: 1
+  possession: {fileID: 0}
   fallingSpeed: 0
   fallingDirection: 0
   groundCheck: {fileID: 84735247488226568}
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 0
   detectWall:
     serializedVersion: 2
     m_Bits: 128
   wallDist: 2
-  _possess: 0
-  toucher: 0
-  isTV: 0
-  isVase: 0
 --- !u!70 &259601454510016061
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

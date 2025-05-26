@@ -13,16 +13,19 @@ public class PlayerControllers : MonoBehaviour
     private Rigidbody2D _rb2d;
     private Collider2D _collider2D;
 
+    public Possession possession;
+
     private SpriteRenderer _spriteRend;
     private Transform _transform;
 
     [Header("MOVE")]
     //[SerializeField] private float speedMove;
-    [SerializeField] private bool canMove = true; //Un bool pou savoir si l'on peut bouger ou non (utile pendant la possession)
+    public bool canMove = true;
 
     [Header("JUMP")]
     //[SerializeField] private float forceJump;
-    [SerializeField] private bool canJump = true;
+    public bool canJump = true;
+
     public float fallingSpeed;
     public float fallingDirection;
     public Transform groundCheck;
@@ -50,6 +53,8 @@ public class PlayerControllers : MonoBehaviour
         TryGetComponent(out _collider2D);
         TryGetComponent(out _rb2d);
         TryGetComponent(out _spriteRend);
+        TryGetComponent(out possession);
+
         
     }
 
@@ -57,13 +62,16 @@ public class PlayerControllers : MonoBehaviour
     {
         slowFall();
         new Vector2(_rb2d.linearVelocity.x, fallingSpeed * _rb2d.linearVelocity.y);
+
+        if (possession == null)
+            return;
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (Input.GetButton("Horizontal") && canMove == true)
+        if (Input.GetButton("Horizontal") && canMove)
             Move();
 
         if (Input.GetKeyDown(KeyCode.Space) && _currentJump < _limiteJump && canJump)

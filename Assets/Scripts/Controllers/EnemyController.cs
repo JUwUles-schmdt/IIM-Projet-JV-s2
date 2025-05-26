@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static EnemyData;
 
-public class EnemyController : MonoBehaviour
+public class EnemyController_R : MonoBehaviour
 {
     public enum STATE
     {

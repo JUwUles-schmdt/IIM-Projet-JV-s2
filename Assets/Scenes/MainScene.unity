@@ -344,12 +344,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b731447c4580ce74da53ed88c24e9116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Stat>k__BackingField:
-    life: 0
-    stamina: 0
-    damage: 0
-    speedMove: 0
-    forceJump: 0
   _target: {fileID: 1876529393}
   _sizeBoxCast: {x: 4, y: 3}
   _offsetBoxCast: {x: 0, y: 0}
@@ -422,7 +416,7 @@ GameObject:
   - component: {fileID: 1633289473}
   - component: {fileID: 1633289472}
   - component: {fileID: 1633289474}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: ennemi_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
